@@ -25,9 +25,9 @@ public class StudentServiceTest {
     @BeforeEach
     void setUp(){
         stundent = new Stundent();
-        stundent.setId(1L);
-        stundent.setName("Juan Perez");
-        stundent.setEmail("juanperez@gmail.com");
+        stundent.setId(2L);
+        stundent.setName("Becomo Alonso");
+        stundent.setEmail("becomo.alonso@gmail.com");
         stundent.setAge(20);
     }
 
@@ -36,7 +36,7 @@ public class StudentServiceTest {
         when(repository.save(any(Stundent.class))).thenReturn(stundent);
         Stundent save = service.saveStudent(new Stundent());
         assertNotNull(save);
-        assertEquals("Juan Perez", save.getName());
+        assertEquals("Becomo Alonso", save.getName());
         verify(repository, times(1)).save(any(Stundent.class));
     }
 
