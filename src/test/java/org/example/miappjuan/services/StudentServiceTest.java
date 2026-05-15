@@ -36,7 +36,7 @@ public class StudentServiceTest {
         when(repository.save(any(Stundent.class))).thenReturn(stundent);
         Stundent save = service.saveStudent(new Stundent());
         assertNotNull(save);
-        assertEquals("Joana Santana", save.getName());
+        assertEquals("Becomo Alonso", save.getName());
         verify(repository, times(1)).save(any(Stundent.class));
     }
 
